@@ -15,13 +15,14 @@ namespace SecurityLab1_Starter
 
             routes.MapRoute(
                 name: "Home",
-                url: "Home/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "Home/{action}",
+                defaults: new { controller = "Home", action = "Index|Contact|About"}
             );
+
 
             routes.MapRoute(
                 name: "Inventory",
-                url: "Inventory/{action}/{id}",
+                url: "Inventory/Index/{id}",
                 defaults: new { controller = "Inventory", action = "Index", id = UrlParameter.Optional }
             );
 
