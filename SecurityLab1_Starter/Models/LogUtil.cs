@@ -10,11 +10,11 @@ namespace SecurityLab1_Starter.Models
     public class LogUtil
     {
 
-        public void LogToFile(String text)
+        public void LogToFile(String text) 
         {
-            using(var writer = new StreamWriter("ErrorLog.txt"))
+            using(var writer = new StreamWriter("D:\\temp\\logs\\ErrorLog.txt", append: true))
             {
-                var currentDate = new DateTime();
+                var currentDate = DateTime.Now;
                 writer.WriteLine("[{0}] {1}", currentDate.ToString(), text);
             }
         }
