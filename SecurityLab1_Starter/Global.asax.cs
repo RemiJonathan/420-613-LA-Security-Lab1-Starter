@@ -25,7 +25,7 @@ namespace SecurityLab1_Starter
 
             LogUtil lu = new LogUtil();
             lu.LogToEventView(System.Diagnostics.EventLogEntryType.Error, ex.Message);
-
+            lu.LogToFile(ex.Message);
 
 
 
