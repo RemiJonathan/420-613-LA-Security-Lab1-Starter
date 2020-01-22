@@ -13,5 +13,11 @@ namespace SecurityLab1_Starter.Controllers
         {
             return View();
         }
+
+        public ActionResult ServerError()
+        {
+            ViewBag.CurrentURl = Request.QueryString["aspxerrorpath"];
+            return View();
+        }
     }
 }
