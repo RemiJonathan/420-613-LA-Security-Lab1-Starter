@@ -9,6 +9,7 @@ namespace SecurityLab1_Starter.Controllers
     public class InventoryController : Controller
     {
         // GET: Inventory
+        [Authorize]
         public ActionResult Index()
         {
             return View();
