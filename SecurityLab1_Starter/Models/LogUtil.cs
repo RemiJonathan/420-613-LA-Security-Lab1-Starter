@@ -12,7 +12,7 @@ namespace SecurityLab1_Starter.Models
 
         public void LogToFile(String text) 
         {
-            using(var writer = new StreamWriter("D:\\temp\\logs\\ErrorLog.txt", append: true))
+            using(var writer = new StreamWriter("D:\\temp\\logs\\Log.txt", append: true))
             {
                 var currentDate = DateTime.Now;
                 writer.WriteLine("[{0}] {1}", currentDate.ToString(), text);

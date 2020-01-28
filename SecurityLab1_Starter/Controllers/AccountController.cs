@@ -27,6 +27,13 @@ namespace SecurityLab1_Starter.Controllers
             {
                 if (authProvider.Authenticate(model.UserName, model.Password))
                 {
+                    LogUtil log = new LogUtil();
+
+                    string loginString = String.Format("{0} logged in.", model.UserName);
+
+                    ViewBag.CurrentLoggedUser = model.UserName;
+
+                    log.LogToFile(loginString);
                     return Redirect(returnUrl ?? Url.Action("Index", "Admin"));
                 }
                 else
